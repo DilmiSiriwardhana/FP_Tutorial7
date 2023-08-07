@@ -7,9 +7,8 @@ object Q3 {
 
   def filterPrime(inputList: List[Int]): List[Int] = {
     def isPrime(num: Int): Boolean = {
-      if (num <= 1) {
+      if (num <= 1) 
         false
-      }
       else if (num <= 3) {
         true
       }
