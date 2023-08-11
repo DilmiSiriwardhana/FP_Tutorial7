@@ -5,20 +5,8 @@ object Q3 {
     println(outputList.mkString(","))
   }
 
-  def filterPrime(inputList: List[Int]): List[Int] = {
-    def isPrime(num: Int): Boolean = {
-      if (num <= 1) { 
-        false
-      }
-      else if (num <= 3) {
-        true
-      }
-      else {
-        val sqrtNum = math.sqrt(num).toInt
-        !(2 to sqrtNum).exists(num % _ == 0)
-      }
-    }
-
-    inputList.filter(isPrime)
-    }
+    def filterPrime(inputList: List[Int]): List[Int] = {
+    inputList.filter(number => number > 1 && (2 until number).forall(i => number % i != 0));
+  }
+  
 }
